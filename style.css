@@ -1,0 +1,26 @@
+body{
+    background-color: lightgreen;
+}
+#sec1{
+    background-color: lightgoldenrodyellow;
+}
+#align_left{
+    text-align: left;
+    font-weight: bolder;
+}
+#align_right{
+    text-align: right;
+    font-weight: bolder;
+}
+#first_head{
+    font-family: 'Koulen';
+    font-weight: bold;
+}
+#second_head{
+    font-family: 'Roboto Slab';
+    font-weight: bold;
+}
+#sketch_header{
+    font-family: 'Oleo Script Swash Caps';
+    color: red;
+}
