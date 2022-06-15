@@ -1,54 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Quick Draw!</title>
-        <title>Sketch Identification</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="main.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <center>
+
+<head>
+    <title>Quick Draw!</title>
+    <title>Sketch Identification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"
+        integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <center>
         <!--Modal Code-->
         <div class="modal fade" id="myModal">
             <div class="modal-content">
                 <div class="modal-header">
-                <button class="close" data-dismiss="modal">&times;</button>
-                <div class="modal-title">
-                    <h1 id="sketch_header">Sketches</h1>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-title">
+                        <h1 id="sketch_header">Sketches</h1>
+                    </div>
                 </div>
-               </div>
                 <div class="modal-body">
-                      <img src="sketch1.png">
-                      <img src="sketch2.png">
-                </div>  
+                    <img src="sketch1.png">
+                    <img src="sketch2.png">
+                </div>
             </div>
         </div>
         <!--Modal Code End-->
         <!--Main coding-->
         <section id="sec1">
-       <b> <h1 id="first_head">Quick Draw!
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" id="show_sketches">Show Sketches</button>
-        </h1>
-        <h4 id="second_head">Draw as fast as you can!</h4></b>
-    </section>
+            <b>
+                <h1 id="first_head">Quick Draw!!
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal"
+                        id="show_sketches">Show Sketches</button>
+                </h1>
+                <h4 id="second_head">Draw as fast as you can!</h4>
+            </b>
+        </section>
         <section id="sec2">
-            <label>I guess you are drawing: </label>
+            <label id="guess">I guess you are drawing: </label>
             <br>
-            <label>Percentage: </label>
+            <label id="percen">Percentage: </label>
             <br>
             <label>Sketch to be drawn:</label>
             <!--Left aligning-->
@@ -59,5 +70,6 @@
         <!--Main Code Ending-->
         <h1></h1>
     </center>
-    </body>
+</body>
+
 </html>
